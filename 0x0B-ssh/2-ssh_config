@@ -1,0 +1,11 @@
+#script to configure ssh client to use privatekey
+
+nano ~/.ssh/config
+
+#add configuration for server
+
+Host 498833-web-01
+    HostName 100.25.220.131
+    User ubuntu
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no

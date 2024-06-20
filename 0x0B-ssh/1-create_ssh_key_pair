@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Variables
+KEY_NAME="school"
+BITS=4096
+PASSPHRASE="betty"
+
+# Create the .ssh directory if it doesn't exist
+mkdir -p ~/.ssh
+
+# Generate the RSA key pair
+ssh-keygen -t rsa -b $BITS -f ~/.ssh/$KEY_NAME -N $PASSPHRASE
+
+# Output the details
+echo "RSA key pair created:"
+echo "Private key: ~/.ssh/$KEY_NAME"
+echo "Public key: ~/.ssh/${KEY_NAME}.pub"
+echo "Passphrase: $PASSPHRASE"
